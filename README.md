@@ -1,8 +1,14 @@
 # README
 
    The Kidnapped Car project assumes a car is stolen and moved to an unknown location. Using known landmarks it is able to figure out it's location and report it. The search uses a Particle Filter.
+   
    The code was built and run on a Virtual Machine running Ubuntu 16.04 and a host machine running Windows 8.1. The simulator is run on the host. P9's code is run on Ubuntu as Windows 8.1 has trouble using uWebSockets.
+   
    A Particle Filter starts with a crude estimate of the vehicle's position. Yaw rate, velocity, and sensor noise are added to create a prediction of the next location. Landmarks, sensor noise and the Sensor Fusion (lidar and radar) are added to make the update step. A resample then starts the loop over at the prediction step. This quickly refines the estimates to fairly accurate guesses.
+   
+   Main.cpp is primarily for communicating with the simulator. THe GPS and Landmark noise variables are assigned in main.cpp. 
+   
+   The particle filter code is in particle_filter.cpp.
    
 
 
